@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blink Blossom — Orders</title>
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff69b4">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap');
   :root{--bloom:#C97B8F;--petal:#F2D7DF;--mist:#F8F4F5;--ink:#1E1418;--stem:#7A5C63;--leaf:#4E7C6B;--gold:#C9A96E;--bg:#FDFBFB}
@@ -435,6 +437,11 @@
 
   applyQuickRange('today');
   loadOrders();
+</script>
+  <script>
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
 </script>
 </body>
 </html>
